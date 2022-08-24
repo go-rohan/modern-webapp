@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"path/filepath"
 
-	"github.com/rshukla9/modern-web-app/pkg/config"
+	"github.com/go-rohan/modern-webapp/pkg/config"
 )
 
 var functions = template.FuncMap{}

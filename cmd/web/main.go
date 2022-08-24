@@ -5,9 +5,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/rshukla9/modern-web-app/pkg/config"
-	"github.com/rshukla9/modern-web-app/pkg/handlers"
-	"github.com/rshukla9/modern-web-app/pkg/render"
+	"github.com/go-rohan/modern-webapp/pkg/config"
+	"github.com/go-rohan/modern-webapp/pkg/handlers"
+	"github.com/go-rohan/modern-webapp/pkg/render"
 )
 
 var portNumber = ":8080"

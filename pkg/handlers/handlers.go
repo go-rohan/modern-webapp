@@ -3,8 +3,8 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/rshukla9/modern-web-app/pkg/config"
-	"github.com/rshukla9/modern-web-app/pkg/render"
+	"github.com/go-rohan/modern-webapp/pkg/config"
+	"github.com/go-rohan/modern-webapp/pkg/render"
 )
 
 var Repo *Repository
