@@ -4,8 +4,6 @@ import (
 	"net/http"
 
 	"github.com/go-rohan/modern-webapp/pkg/config"
-	"github.com/go-rohan/modern-webapp/pkg/models"
-	"github.com/go-rohan/modern-webapp/pkg/render"
 )
 
 // holds the data sent from handlers and send it to the template
@@ -28,18 +26,20 @@ func NewHandlers(r *Repository) {
 
 func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
 
-	render.RenderTemplate(w, "home.page.tmpl", &models.TemplateData{})
+	w.WriteHeader(http.StatusOK)
+	w.Header().Set("Content-Type", "application/json")
+	w.Write([]byte(`{"message":"hello world!"}`))
+
 }
 
 func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 
 	stringMap := make(map[string]string)
 
-	// m.App.Session
-
 	stringMap["test"] = "Hello again"
-	render.RenderTemplate(w, "about.page.tmpl", &models.TemplateData{
-		StringMap: stringMap,
-	})
+
+	w.WriteHeader(http.StatusOK)
+	w.Header().Set("Content-Type", "application/json")
+	w.Write([]byte(`{"message":"hello world!"} `))
 
 }
